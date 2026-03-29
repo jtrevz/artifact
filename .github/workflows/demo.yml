@@ -50,6 +50,6 @@ jobs:
         run: ls
       - name: Output filename
         # Needs object contains outputs of all jobs --> set as a need obvi cause you need job to run to get var before this
-        run: echo "{{ needs.build.outputs.script-file }}"
+        run: echo "${{ needs.build.outputs.script-file }}"
       - name: Deploy
         run: echo "Deploying..."
